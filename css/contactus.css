@@ -1,0 +1,90 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+     /* border: 1px solid red;   */
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: white;
+}
+
+
+
+
+/* contactuscontainerko lagi */
+.contactus{
+    margin-top: 5vh;
+    margin-inline: 48px;
+}
+.contactcontainer{
+    display:flex;
+    justify-content: center;
+}
+.formcontainer{
+    background-color:white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+    padding:25px;
+    border-radius: 5px;
+}
+.containerheader{
+    font-size: 40px;
+    font-weight: bolder;
+    color:#10323A;
+    text-align:center;
+}
+.textare{
+    height:30px;
+    width:500px;
+    margin-top: 15px;
+    border-radius:6px ;
+    border:1px solid grey;
+    box-shadow: 0px 0px 5px;
+    background-color: rgb(241, 241, 241);
+}
+.submitbutton{
+    font-size: 20px;
+    font-weight: bolder;
+    color:#10323A;
+    margin-left:35%;
+    height:44px;
+    width:220px;
+    border-radius: 20px;
+    margin-top:50px;
+    border:1px solid grey;
+    box-shadow: 0px 0px 5px;
+}
+.form1{
+    margin-left:40px;
+}
+.form2{
+    margin-left:43px;
+}
+.form3{
+    margin-left:25px;
+}
+.form4{
+    margin-left:22px;
+}
+.form5{
+    margin-top:26px;
+    margin-left:100px;
+}
+.textaree{
+    height:60px;
+    width:500px;
+    margin-top: 15px;
+    margin-right:20px;
+    border-radius:6px ;
+    border:1px solid grey;
+    box-shadow: 0px 0px 5px;
+    background-color: rgb(241, 241, 241);
+}
+.form6{
+    margin-left:12px;
+    margin-top:28px;
+}
+p label{
+    font-weight: bold;
+}
+
+
