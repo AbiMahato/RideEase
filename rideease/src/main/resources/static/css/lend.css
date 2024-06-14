@@ -1,0 +1,141 @@
+* {
+    /* border: 1px solid red; */
+     /*font-family: Arial, Helvetica, sans-serif;*/
+    margin: 0px;
+    padding: 0px;
+}
+/* Form CSS */
+.lend {
+    margin-top: 4vh;
+    margin-inline: 48px;
+}
+
+.title {
+    font-size: 23px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.lend__container {
+    padding: 50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+    border-radius: 15px;
+
+}
+
+.container__info_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.form_container {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+
+}
+
+.form_field {
+    width: 100%;
+    height: 35px;
+    border: 1px solid;
+    /* margin-top: 10px; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.form_field > input {
+    border: 0px;
+    width: 100%;
+    height: 33px;
+    border-radius: 5px;
+    /* display: flex; */
+
+}
+.form_field_doc {
+    width: 100%;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.form_field_doc > input {
+    border: 0px;
+    width: 100%;
+    height: 33px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+
+.gap {
+    margin-top: 20px;
+}
+
+.price_form {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.price__ratetype {
+    display: inline-block;
+}
+
+.price_form>.price__div2 {
+    display: flex;
+    justify-content: right;
+    align-items: baseline;
+}
+
+.form_field1 {
+    display: inline-block;
+    width: 60%;
+    height: 35px;
+    border: 1px solid;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.form_field1>input {
+    border: 0px;
+    width: 100%;
+    height: 33px;
+
+    border-radius: 5px;
+}
+
+
+.submit_container {
+    display: flex;
+    justify-content: end;
+}
+
+.submit {
+    width: 180px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #183AED;
+    color: white;
+    font-size: 18px;
+}
+
+.cancel {
+    width: 180px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+}
