@@ -19,5 +19,26 @@ public class MainController {
         return "index";
     }
 
+    @GetMapping("/aboutus")
+    public String aboutus(Model model) {
+        return "aboutus";
+    }
+    @GetMapping("/login")
+    public String login(Model model) {
+        return "login";
+    }
+    @GetMapping("/register")
+    public String register(Model model) {
+        return "register";
+    }
+    @GetMapping("/product")
+    public String product(Model model) {
+        return "product";
+    }
+    @GetMapping("/vehicle_list")
+    public String vehicleList(Model model) {
+        return "vehicle_list";
+    }
+
 
 }

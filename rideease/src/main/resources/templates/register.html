@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register to RideEase</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="register" id="register" style="opacity: 1">
+        <div class="register__container" id="register__container">
+                <div class="register-form">
+                <div class="register-form__logo-container">
+                    <img src="images/logo/logo-no-background.png" class="register-form__logo">
+                </div>
+                <p class="register-form__heading-text">Register to RideEase</p>
+                <p class="register-form__second-text">A Vehicle renting and lending platform.</p>
+            
+                <div>
+                    <form method="post" action = "" class="register__actual-form">
+                        <div class="register-form__inputs">
+                            <input type="text" name="firstname" placeholder="Your first name.." class="email-input" required>
+                        </div>
+                        <div class="register-form__inputs">
+                            <input type="text" name="lastname" placeholder="Your last name.."  class="email-input" required>
+                        </div>
+                        <div class="register-form__inputs">
+                            <input type="text" name="email_username" placeholder="Email or Username*" class="email-input">
+                        </div>
+                        <div class="register-form__inputs">
+                            <input type="password" name="password" placeholder="Password *" class="password-input" id="register_password">
+                            <i class='bx bx-show' id="bx-show-register" onclick="hidePassword('register')"></i>
+                            <i class='bx bx-hide' id="bx-hide-register" onclick="showPassword('register')"></i>
+                        </div>
+                        <div class="register-form__inputs">
+                            <input type="password" name="password" placeholder="Confirm_Password *" class="password-input" id="register_password">
+                            <i class='bx bx-show' id="bx-show-register" onclick="hidePassword('register')"></i>
+                            <i class='bx bx-hide' id="bx-hide-register" onclick="showPassword('register')"></i>
+                        </div>
+                        <input type="submit" value="register" class="register-submit">
+                    </form>
+                    <p class="register-form__bottom-text"> Register to RideEase for easy vehicle renting and lending.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html>
