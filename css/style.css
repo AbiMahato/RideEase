@@ -387,3 +387,10 @@
     padding-right: 0;
     border-right: none;
 }
+
+/* Added img resize to make all img height of same height */
+.img-resize{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
