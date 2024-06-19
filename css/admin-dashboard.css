@@ -1,0 +1,8 @@
+.hamburger{
+    height:30px;
+    background-color:white;
+}
+.hamburger > i{
+    font-size: rem;
+    color: black;
+}
