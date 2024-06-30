@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(245 248 233);
+}
+.navbar{
+    position:fixed;
+    z-index: 5;
+    top: 0px;
+    height:100%;
+    width: 17%;
+    background-color:#3E8090;
+}
+.logo{
+    margin: 15px;   
+}
+.list{
+    margin-left: 20px;
+    
+}
+.list li{
+    height: 58px;
+}
+.nav1, .nav2, .nav3, .nav4, .nav5{
+   font-size:17px;
+   transition: font-size 0.5s;
+}
+.nav1:hover{
+    font-size: 22px;
+}
+.nav2:hover{
+    font-size: 22px;
+}
+.nav3:hover{
+    font-size: 22px;
+}.nav4:hover{
+    font-size: 22px;
+}
+.nav5:hover{
+    font-size: 22px;
+}
+
+.nav_element{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 25px;
+    margin-inline: 20px;
+    margin-top: 20px;
+    color: white;
+}

@@ -7,61 +7,142 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/admin-dashboard.css">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
-    <button class="btn btn-primary hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button>
+  <nav class="navbar">
+    <div class="navbar_div">
+        <div class="logo" >
+          <img src="images/logo/logo-black.png" alt="this is logo">
+        </div>
+        <ul type="none" class="list">
+            <li><a href="" class="nav_element nav1"><i class="fa-solid fa-table-columns"></i>&nbsp;Dashboard</a></li>
+            <li class="nav_element nav2">
+                <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  <i class="fa-solid fa-file-lines" style="color: white;"></i> Vehicle Management
+                </a>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <ul>
+                            <li><a href="">All Vehicle</a></li>
+                            <li><a href="">Pending Vehicle</a></li>
+                            <li><a href="">Approved Vehicle</a></li>
+                            <li><a href="">Archived Vehicle</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#" class="nav_element nav3"><i class="fa-solid fa-id-badge"></i>&nbsp;My profile</a></li>
+            <li><a href="#" class="nav_element nav4"><i class="fa-solid fa-user"></i>&nbsp;Customer Information</a></li>
+            <li><a href="#" class="nav_element nav5"><i class="fa-solid fa-file"></i>&nbsp;Vehicle Owners</a></li>
+        </ul>
+    </div>
+</nav>
 
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <p>Try scrolling the rest of the page to see this option in action.</p>
+
+ 
+<div class="dashboard-nav">
+  <div class="title-nav">Dashboard</div>
+  <div class="dashboard-nav-info">
+    <div class="dashboard-nav-name">Nishan</div>
+     <div class="nav-profile"></div>
   </div>
 </div>
 
 
-
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
+<div class="detail-boxes">
+  <div class="details-boxes-box" style="overflow: hidden;">
+    <div class="three-dot" style="float: right;">
+      <i class="fa-solid fa-ellipsis-vertical"></i>
     </div>
+    <div class="box-icon" style="float: left;">
+      <i class="fa-solid fa-rectangle-list"></i>
+    </div>
+    <br><br>
+    <p class="box-text">Total numbers of vehicle</p>
+    <p class="total-no">7</p>
+    
   </div>
 
+  <div class="details-boxes-box" style="overflow: hidden;">
+    <div class="three-dot" style="float: right;">
+      <i class="fa-solid fa-ellipsis-vertical"></i>
+    </div>
+    <div class="box-icon" style="float: left;">
+      <i class="fa-solid fa-clipboard"></i>
+    </div>
+    <br><br>
+    <p class="box-text">Vehicle available for rent</p>
+    <p class="total-no">7</p>
+  </div>
+
+  <div class="details-boxes-box" style="overflow: hidden;">
+    <div class="three-dot" style="float: right;">
+      <i class="fa-solid fa-ellipsis-vertical"></i>
+    </div>
+    <div class="box-icon" style="float: left;">
+      <i class="fa-solid fa-list-check"></i>
+    </div>
+    <br><br>
+    <p class="box-text">Vehicle already booked</p>
+    <p class="total-no">7</p>
+    
+  </div>
+
+  <div class="details-boxes-box" style="overflow: hidden;">
+    <div class="three-dot" style="float: right;">
+      <i class="fa-solid fa-ellipsis-vertical"></i>
+    </div>
+    <div class="box-icon" style="float: left;">
+      <i class="fa-solid fa-check-to-slot"></i>
+    </div>
+    <br><br>
+    <p class="box-text">Total no of Approved Vehicle</p>
+    <p class="total-no">7</p>
+    
+  </div>
+
+  <div class="details-boxes-box" style="overflow: hidden;">
+    <div class="three-dot" style="float: right;">
+      <i class="fa-solid fa-ellipsis-vertical"></i>
+    </div>
+    <div class="box-icon" style="float: left;">
+      <i class="fa-solid fa-hourglass-half"></i>
+    </div>
+    <br><br>
+    <p class="box-text">Total no of Pending Vehicle</p>
+    <p class="total-no">7</p>
+    
+  </div>
+
+  <div class="details-boxes-box" style="overflow: hidden;">
+    <div class="three-dot" style="float: right;">
+      <i class="fa-solid fa-ellipsis-vertical"></i>
+    </div>
+    <div class="box-icon" style="float: left;">
+      <i class="fa-solid fa-box-archive"></i>
+    </div>
+    <br><br>
+    <p class="box-text">Total no of Archived Vehicle</p>
+    <p class="total-no">7</p>
+    
+  </div>
+  
+</div>
+   
 
 
 
 
-  <!-- body starts here -->
-   <div>      
 
-    <h1>hello!!!</h1>    
-    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, cupiditate! Eligendi perferendis quibusdam, officia ea magnam, enim qui, debitis excepturi et facere repellendus id consequatur iusto itaque illo voluptate quod?</div>
-    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, cupiditate! Eligendi perferendis quibusdam, officia ea magnam, enim qui, debitis excepturi et facere repellendus id consequatur iusto itaque illo voluptate quod?</div>
-    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, cupiditate! Eligendi perferendis quibusdam, officia ea magnam, enim qui, debitis excepturi et facere repellendus id consequatur iusto itaque illo voluptate quod?</div>
+
+
+
+
+
+
+  
    
 
 </div>
