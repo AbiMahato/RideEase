@@ -35,33 +35,28 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 20px;
 }
 
 .profile-section {
-    width: 500px;
+    width: 45%;
     background-color: white;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    height: 100%;
-    /* Matching height */
 }
 
 .des {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 30%;
+    max-width: 600px;
+    background-color: white;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    /* Matching height */
-    width: calc(100% + 80px);
-    /* Slightly wider width than profile-section */
 }
 
 .image-section {
@@ -73,9 +68,7 @@ body {
 .image-section img {
     max-width: 100%;
     height: auto;
-    /* Adjusting image height */
     max-height: 300px;
-    /* Example height, adjust as needed */
 }
 
 .description-section {
@@ -83,7 +76,6 @@ body {
     padding: 15px;
     border-top: 1px solid #ccc;
     height: calc(100% - 85px);
-    /* Adjusting description height */
 }
 
 .description-section h2 {
@@ -151,51 +143,6 @@ body {
     border: 1px solid #bdc3c7;
     padding: 10px;
     box-sizing: border-box;
-}
-
-.des {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    /* Matching height */
-    width: calc(100% + 80px);
-    /* Slightly wider width than profile-section */
-}
-
-.image-section {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.image-section img {
-    max-width: 100%;
-    height: auto;
-    /* Adjusting image height */
-    max-height: 300px;
-    /* Example height, adjust as needed */
-}
-
-.description-section {
-    background-color: white;
-    padding: 15px;
-    border-top: 1px solid #ccc;
-    height: calc(100% - 85px);
-    /* Adjusting description height */
-}
-
-.description-section h2 {
-    font-size: 24px;
-    margin-top: 0;
-}
-
-.description-section p {
-    line-height: 1.6;
 }
 
 .profile-dropdown {

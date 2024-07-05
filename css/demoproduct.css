@@ -1,0 +1,328 @@
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #00B98E 0%, #97d9e1 100%);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: flex-start;
+    margin: 30px 30px;
+    max-width: 1500px;
+}
+
+.exzoom {
+    max-width: 100%;
+}
+
+.exzoom .exzoom_img_box {
+    border: none;
+    background: white;
+}
+
+.exzoom_img_ul img {
+    max-width: 550px;
+    max-height: 100%;
+}
+
+.right {
+    border: 1px solid transparent;
+    max-width: 500px;
+    max-height: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.right h3,
+.right h1 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.right h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.right p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.right button {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #00B98E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.right button:hover {
+    background-color: #40b197;
+}
+
+.hidden {
+    display: none;
+}
+
+.nav-bar {
+    z-index: 1;
+}
+
+.modal {
+    z-index: 1050;
+}
+
+.modal-backdrop {
+    z-index: 1040;
+}
+
+.modal-content {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+.modal-header {
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 8px;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+}
+
+.modal-body {
+    padding: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.modal-resize {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.modal-footer {
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 8px;
+}
+
+.modal-footer .btn {
+    margin-left: 5px;
+    padding: 10px 10px;
+    font-size: 0.875rem;
+}
+
+.login__actual-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.login-form__inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    gap: 5px;
+}
+
+.email-input,
+.password-input {
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-submit {
+    background-color: #00B98E;
+    color: #fff;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-submit:hover {
+    background-color: #40b197;
+}
+
+.login-form__bottom-text {
+    font-size: 0.875rem;
+    text-align: center;
+    color: #666;
+    margin-top: 5px;
+}
+
+.login-form__bottom-text a {
+    color: #00B98E;
+    text-decoration: none;
+}
+
+.login-form__bottom-text a:hover {
+    text-decoration: underline;
+}
+
+.modal-lg {
+    max-width: 600px;
+}
+
+.contactcontainer {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.contactcontainer .formcontainer {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contactcontainer .containerheader {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.contactcontainer hr {
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+.contactcontainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contactcontainer label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.contactcontainer .textare {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contactcontainer .submitbutton {
+    background-color: #00B98E;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contactcontainer .submitbutton:hover {
+    background-color: #40b197;
+}
+
+.container-xxl {
+    background-color: #fff;
+}
+
+.nav-bar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    height: 60px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 1rem;
+    color: #333;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    color: #00B98E;
+}
+
+.btn-primary {
+    background-color: #00B98E;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #40b197;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+}
+
+.footer a {
+    color: #bbb;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer .btn-social {
+    margin-right: 10px;
+    color: #bbb;
+    background-color: transparent;
+}
+
+.footer .btn-social:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+.footer-menu a {
+    color: #bbb;
+}
+
+.footer-menu a:hover {
+    color: #fff;
+}
+
+.back-to-top {
+    background-color: #00B98E;
+    color: #fff;
+    border: none;
+}
+
+.back-to-top:hover {
+    background-color: #40b197;
+}
