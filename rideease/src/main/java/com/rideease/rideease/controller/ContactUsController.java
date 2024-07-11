@@ -16,6 +16,7 @@ public class ContactUsController {
     @GetMapping("/contactus")
     public String showContactForm(Model model) {
         model.addAttribute("contactus", new ContactUsModel());
+        model.addAttribute("page", "contactus");
         return "contactus";
     }
 

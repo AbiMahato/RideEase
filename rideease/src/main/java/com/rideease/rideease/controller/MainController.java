@@ -16,27 +16,31 @@ public class MainController {
 
     @GetMapping("/")
     public String home(Model model) {
+        model.addAttribute("page", "index");
         return "index";
     }
 
     @GetMapping("/aboutus")
     public String aboutus(Model model) {
+        model.addAttribute("page", "aboutus");
         return "aboutus";
     }
     @GetMapping("/login")
-    public String login(Model model) {
+    public String login() {
         return "login";
     }
     @GetMapping("/register")
-    public String register(Model model) {
+    public String register() {
         return "register";
     }
     @GetMapping("/product")
     public String product(Model model) {
+        model.addAttribute("page", "product");
         return "product";
     }
     @GetMapping("/vehicle_list")
     public String vehicleList(Model model) {
+        model.addAttribute("page", "vehiclelist");
         return "vehicle_list";
     }
 

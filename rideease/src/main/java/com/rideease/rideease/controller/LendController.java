@@ -17,6 +17,7 @@ public class LendController {
     @GetMapping("/lend")
     public String showLendForm(Model model) {
         model.addAttribute("lend", new LendModel());
+        model.addAttribute("page", "lend");
         return "lend";
     }
     @PostMapping("/lend")
