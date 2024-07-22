@@ -41,6 +41,9 @@
 .btn.btn-primary,
 .btn.btn-secondary {
     color: #FFFFFF;
+    /*Added to adjust bg-color bcuz of modal*/
+    background-color: #00B98E;
+    border: 1px solid transparent;
 }
 
 .btn-square {
@@ -248,7 +251,7 @@
 }
 
 
-/*** Property List ***/
+/*** Vehicle List ***/
 .nav-pills .nav-item .btn {
     color: var(--dark);
 }

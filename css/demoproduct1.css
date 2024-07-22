@@ -3,6 +3,22 @@ body {
     background-image: linear-gradient(to top, #00B98E 0%, #97d9e1 100%);
 }
 
+/* Your existing CSS */
+/* Add the CSS for the fixed button at the bottom of the right container */
+.right {
+    position: relative;
+    padding-bottom: 80px; /* Ensure space at the bottom for the button */
+}
+
+.fixed-rent-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+
+
 /* .container .product {
  
     display: grid;
@@ -14,11 +30,14 @@ body {
 } */
 /*changed*/
 .container{
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    align-items: flex-start;
-    margin: 30px 30px;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+    /* flex-direction: row; */
+    /* gap: 50px; */
+    /* align-items: flex-start; */
+    /* margin: 30px 30px; */
     max-width: 1500px;
 }
 .exzoom {
@@ -40,8 +59,9 @@ body {
 
 .right {
     border: 1px solid transparent;
-    max-width: 400px; /*changed 400 to 500*/
-    max-height: 100%;
+   /*changed 400 to 500*/
+    /* max-width: 400px;
+     max-height: 100%; */
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
@@ -237,4 +257,38 @@ body {
     max-width: 600px;
 }
 
+/* Style for <p> tags within the form */
+form p {
+    margin-bottom: 15px; /* Add some space between paragraphs */
+    font-size: 1rem; /* Standard font size */
+    color: #333; /* Text color */
+}
 
+/* Style for <label> tags within the form */
+form label {
+    display: flex; /* Make the label and input inline flex items */
+    flex-direction: column; /* Align label and input vertically */
+    font-size: 0.875rem; /* Slightly smaller font size */
+    color: #333; /* Text color */
+    margin-bottom: 5px; /* Space below the label */
+}
+
+/* Style for input fields within the labels */
+form label input {
+    padding: 8px; /* Padding inside the input fields */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Standard font size */
+    margin-top: 5px; /* Space between label text and input field */
+}
+
+/* Adjusting the size of the input fields */
+form label input[type="file"] {
+    padding: 5px; /* Padding for file input fields */
+}
+
+/* Color change for button class secondary color change */
+.secondarycolor-change {
+    background-color: #FF5733 !important;
+    border: 1px solid transparent;
+}
