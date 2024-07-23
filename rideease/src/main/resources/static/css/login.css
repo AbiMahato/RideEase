@@ -75,6 +75,9 @@
     margin: 0 0 3rem 0;
     line-height: 1.1;
 }
+.login-msg{
+    text-align: center;
+}
 
 .login-form__inputs {
     border-bottom: 1px solid #00000080;

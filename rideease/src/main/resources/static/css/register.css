@@ -92,7 +92,7 @@
 .bx-hide{
     cursor: pointer;
 }
-#bx-show-register{
+#bx-show-register ,#bx-show-register1{
     display: none ;
     cursor:pointer;
 }
