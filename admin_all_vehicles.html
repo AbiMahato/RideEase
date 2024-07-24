@@ -9,29 +9,75 @@
 
 
     <link rel="stylesheet" href="css/admin-all-vehicles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+  <nav class="navbar">
+    <div class="navbar_div">
+        <div class="logo" >
+          <img src="images/logo/logo-black.png" alt="this is logo">
+        </div>
+        <ul type="none" class="list">
+            <li><a href="" class="nav_element nav1"><i class="fa-solid fa-table-columns"></i>&nbsp;Dashboard</a></li>
+            <li class="nav_element nav2">
+                <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  <i class="fa-solid fa-file-lines" style="color: white;"></i> Vehicle Management
+                </a>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <ul>
+                            <li><a href="">All Vehicle</a></li>
+                            <li><a href="">Pending Vehicle</a></li>
+                            <li><a href="">Approved Vehicle</a></li>
+                            <li><a href="">Archived Vehicle</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#" class="nav_element nav3"><i class="fa-solid fa-id-badge"></i>&nbsp;My profile</a></li>
+            <li><a href="#" class="nav_element nav4"><i class="fa-solid fa-user"></i>&nbsp;Customer Information</a></li>
+            <li><a href="#" class="nav_element nav5"><i class="fa-solid fa-file"></i>&nbsp;Vehicle Owners</a></li>
+            <li><a href="#" class="nav_element nav5"><i class="fa-solid fa-address-card"></i>&nbsp;Customer Feedback</a></li>
+        </ul>
+    </div>
+</nav>
+
+
     <div class="admin-header-wrapper">
         <div class="admin-header">
             <div class="page-title">All Vehicles</div>
             <div class="profile-info">
-                <p>username</p>
+                <p class="profile-username">username</p>
                 <div class="profile-img">
                     <img src="images/2477.jpg" alt="">    
                 </div>
             </div>
         </div>
-        <div class="page-topic">Topic</div>
+        <div class="page-topic">Lend vehicle</div>
     </div>
 
     <div class="admin-table-wrapper">
         <table class="table table-bordered table-hover">
             <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+              <tr class="table-heading">
+                <th scope="col">id/Fields</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Vehicle Status</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Current Location</th>
+                <th scope="col">Pick UP Location</th>
+                <th scope="col">Drop Off Location</th>
+                <th scope="col">License Plate Number</th>
+                <th scope="col">Price</th>
+                <th scope="col">Milage</th>
+                <th scope="col">Vehicle Image</th>
+                <th scope="col">Citizenship Image</th>
+                <th scope="col">Insurance Coverage</th>
+                <th scope="col">Vehicle Details</th>
+                <th scope="col">Vehicle Status</th>
+                <th scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -40,18 +86,36 @@
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
               </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
+              
             </tbody>
           </table>
 
