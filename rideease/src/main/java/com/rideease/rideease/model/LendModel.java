@@ -24,6 +24,7 @@ public class LendModel {
     private String vehicleImage;
     private String CitizenshipImage;
     private String InsuranceProofImage;
+    private String mileage;
     private String vehicleDetails;
 
     public Long getId() {
@@ -152,6 +153,14 @@ public class LendModel {
 
     public void setInsuranceProofImage(String insuranceProofImage) {
         InsuranceProofImage = insuranceProofImage;
+    }
+
+    public String getMileage() {
+        return mileage;
+    }
+
+    public void setMileage(String mileage) {
+        this.mileage = mileage;
     }
 
     public String getVehicleDetails() {
