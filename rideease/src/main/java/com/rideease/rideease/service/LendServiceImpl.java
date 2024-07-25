@@ -5,6 +5,8 @@ import com.rideease.rideease.repository.LendRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class LendServiceImpl implements LendService {
     @Autowired
@@ -13,5 +15,8 @@ public class LendServiceImpl implements LendService {
     @Override
     public void saveLendDetails(LendModel lend){
         lendRepository.save(lend);
+    }
+    public List<LendModel> getLendDetails(){
+        return lendRepository.findAll();
     }
 }

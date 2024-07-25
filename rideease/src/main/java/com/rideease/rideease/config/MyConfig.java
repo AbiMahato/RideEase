@@ -1,5 +1,6 @@
 package com.rideease.rideease.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -11,6 +12,9 @@ import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
 public class MyConfig {
+    @Autowired
+    private CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
+
     @Bean
     public UserDetailsService getUserDetailsService() {
         return new UserDetailsServiceImpl();
@@ -40,6 +44,7 @@ public class MyConfig {
                 )
                 .formLogin(form -> form
                         .loginPage("/login") // Custom login page
+                        .successHandler(customAuthenticationSuccessHandler)
                         .permitAll())
                 .logout(logout -> logout
                         .logoutUrl("/logout")
