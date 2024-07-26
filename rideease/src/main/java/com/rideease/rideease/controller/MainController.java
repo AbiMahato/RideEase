@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.security.Principal;
 import java.util.List;
@@ -20,12 +21,22 @@ public class MainController {
     private LendService lendService;
 
     @GetMapping("/")
-    public String home(Model model) {
-        List<LendModel> lendDetail =lendService.getLendDetails();
+    public String home(@RequestParam(value = "currentLocation", required = false) String currentLocation,
+                       @RequestParam(value = "vehicleType", required = false) String vehicleType,
+                       Model model) {
+
+        List<LendModel> lendDetail;
+        if (currentLocation == null || vehicleType == null) {
+            lendDetail = lendService.getLendDetails();
+        } else {
+            lendDetail = lendService.searchVehicles(currentLocation, vehicleType);
+        }
+
         model.addAttribute("lendDetail", lendDetail);
         model.addAttribute("page", "index");
         return "index";
     }
+
 
     @GetMapping("/aboutus")
     public String aboutus(Model model) {

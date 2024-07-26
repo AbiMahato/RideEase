@@ -20,8 +20,13 @@ public class LendServiceImpl implements LendService {
     public List<LendModel> getLendDetails(){
         return lendRepository.findAll();
     }
+  
+    
+    public List<LendModel> searchVehicles(String current_location, String vehicle_type) {
+        return lendRepository.findByCurrentLocationAndVehicleType(current_location, vehicle_type);
     @Override
     public Optional<LendModel> getVehicleById(Long id) {
         return lendRepository.findById(id);
+
     }
 }
