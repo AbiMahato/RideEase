@@ -2,9 +2,11 @@ package com.rideease.rideease.controller;
 
 import com.rideease.rideease.model.UserModel;
 import com.rideease.rideease.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -20,9 +22,8 @@ public class UserRegisterController {
     }
 
     @PostMapping("/register")
-    public String SubmitUserForm(UserModel user) {
+    public String SubmitUserForm( UserModel user) {
         userService.createUser(user);
-
         return "redirect:/register";
     }
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Select Vehicle</title>
+</head>
+<body>
+<h1>Select a Vehicle</h1>
+<form th:action="@{/selectVehicle}" method="post">
+    <table>
+        <thead>
+        <tr>
+            <th>Select</th>
+            <th>Vehicle Type</th>
+            <th>Current Location</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="vehicle : ${vehicles}">
+            <td>
+                <input type="radio" th:name="selectedVehicleId" th:value="${vehicle.id}" required>
+            </td>
+            <td th:text="${vehicle.vehicleType}"></td>
+            <td th:text="${vehicle.currentLocation}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+</form>
+</body>
+</html>
++
