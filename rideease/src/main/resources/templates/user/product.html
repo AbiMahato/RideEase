@@ -11,49 +11,128 @@
 <body>
 <section>
     <div class="container-xxl bg-white p-0">
-        <div class="product">
-            <div class="container">
-                <div class="exzoom hidden" id="exzoom">
-                    <div class="exzoom_img_box">
-                        <ul class='exzoom_img_ul allimages'>
-                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Front View.jpg}"/></li>
-                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Front Left View.jpg}"/></li>
-                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Front Right View.jpg}"/></li>
-                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 DashBoard.jpg}"/></li>
-                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Dashbaord Display.jpg}"/></li>
-                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Rear Left View.jpg}"/></li>
-                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Right Rear View.jpg}"/></li>
-                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Rear View.jpg}"/></li>
-                        </ul>
-                    </div>
-                    <div class="exzoom_nav"></div>
-                    <p class="exzoom_btn">
-                        <a href="javascript:void(0);" class="exzoom_prev_btn"> < </a>
-                        <a href="javascript:void(0);" class="exzoom_next_btn"> > </a>
-                    </p>
+<!--        <div class="product">-->
+<!--            <div class="container">-->
+<!--                <div class="exzoom hidden" id="exzoom">-->
+<!--                    <div class="exzoom_img_box">-->
+<!--                        <ul class='exzoom_img_ul allimages'>-->
+<!--                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Front View.jpg}"/></li>-->
+<!--                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Front Left View.jpg}"/></li>-->
+<!--                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Front Right View.jpg}"/></li>-->
+<!--                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 DashBoard.jpg}"/></li>-->
+<!--                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Dashbaord Display.jpg}"/></li>-->
+<!--                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Rear Left View.jpg}"/></li>-->
+<!--                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Right Rear View.jpg}"/></li>-->
+<!--                            <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Rear View.jpg}"/></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                    <div class="exzoom_nav"></div>-->
+<!--                    <p class="exzoom_btn">-->
+<!--                        <a href="javascript:void(0);" class="exzoom_prev_btn"> < </a>-->
+<!--                        <a href="javascript:void(0);" class="exzoom_next_btn"> > </a>-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--                <div class="right">-->
+<!--                    <h3>Ev Vehicle</h3>-->
+<!--                    <h1>BYD ATT0 3</h1>-->
+<!--                    <h1>RS 1500</h1>-->
+<!--                    <i class="fa-solid fa-star"></i>-->
+<!--                    <i class="fa-solid fa-star"></i>-->
+<!--                    <i class="fa-solid fa-star"></i>-->
+<!--                    <i class="fa-solid fa-star"></i>-->
+<!--                    <i class="fa-solid fa-star-half-stroke"></i>-->
+<!--                    <h3>Brand: BYD Company </h3>-->
+<!--                    <h4>Available Offers</h4>-->
+<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium massa vitae elit vulputate-->
+<!--                        ultrices. Integer varius, lacus nec fermentum varius, justo odio laoreet quam, ut laoreet ex-->
+<!--                        tortor vel libero.</p>-->
+<!--                    <p>Pellentesque vitae arcu eu lorem tempor feugiat vel non leo. Phasellus congue nisi vitae mauris-->
+<!--                        vehicula, nec commodo mauris consequat.</p>-->
+<!--                    <button>Rent Now</button>-->
+<!--                </div>-->
+
+<!--                <form th:action="@{/logout}" method="post">-->
+<!--                    <button type="submit">Logout</button>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="container">
+            <div class="exzoom hidden" id="exzoom">
+                <div class="exzoom_img_box">
+                    <ul class='exzoom_img_ul allimages'>
+                        <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Front View.jpg}"/>/li>
+                        <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Front Left View.jpg}"/></li>
+                        <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Front Right View.jpg}"/></li>
+                        <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 DashBoard.jpg}"/></li>
+                        <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Dashbaord Display.jpg}"/></li>
+                        <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Rear Left View.jpg}"/></li>
+                        <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Right Rear View.jpg}"/></li>
+                        <li><img th:src="@{/images/Vehicleimg/BYD Atto 3 Rear View.jpg}"/></li>
+                    </ul>
                 </div>
-                <div class="right">
-                    <h3>Ev Vehicle</h3>
-                    <h1>BYD ATT0 3</h1>
-                    <h1>RS 1500</h1>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                    <h3>Brand: BYD Company </h3>
-                    <h4>Available Offers</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium massa vitae elit vulputate
-                        ultrices. Integer varius, lacus nec fermentum varius, justo odio laoreet quam, ut laoreet ex
-                        tortor vel libero.</p>
-                    <p>Pellentesque vitae arcu eu lorem tempor feugiat vel non leo. Phasellus congue nisi vitae mauris
-                        vehicula, nec commodo mauris consequat.</p>
-                    <button>Rent Now</button>
+                <div class="exzoom_nav"></div>
+                <p class="exzoom_btn">
+                    <a href="javascript:void(0);" class="exzoom_prev_btn"> < </a>
+                    <a href="javascript:void(0);" class="exzoom_next_btn"> > </a>
+                </p>
+            </div>
+            <div class="right">
+                <h3>Ev Vehicle</h3>
+                <h1>BYD ATT0 3</h1>
+                <h1>RS 1500</h1>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+
+                <h3>Brand: BYD Company </h3>
+                <h4>Available Offers</h4>
+                <p>BYD ATTO 3 is equipped with the all-new BYD e-Platform 3.0 designed exclusively for pure electric vehicles.
+                    Giving full play to the advantages of intelligence, efficiency, safety and aesthetics, e-Platform 3.0 aims to promote NEVs’ performance in safety and low-temperature driving range as well as improve intelligent driving experiences, to build more efficient and safer new intelligent EVs.</p>
+
+                <!-- <button>Rent Now</button> -->
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Rent Now
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+
+
+
+
+                        <div class="modal-content">
+                            <!-- <div class="modal-header"> -->
+                            <div class="contactcontainer">
+                                <div class="formcontainer">
+                                    <p class="containerheader">Fill the form</p><hr color="black">
+                                    <form action="#"  method="post" th:action="@{/product}" th:object="${productBook}">
+                                        <p><label>Name*:</label><input type="text" name="name" required class="textare form1"></p>
+                                        <p><label>Email*:</label><input type="email" name="email" required class="textare form2"></p>
+                                        <p><label>Number*:</label><input type="number" name="number" required class="textare form3"></p>
+                                        <p><label>Address*:</label><input type="text" name="address" required class="textare form4"></p>
+                                        <p><label>Citizenship photo*:<input type="file" name="ctz" required class=" form5"></label></p>
+                                        <p><label>license photo*:<input type="file" name="lic" required class=" form6"></label></p>
+
+                                        <input type="Submit" value="Submit" class="submitbutton">
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+
+
+
+
+
+                    </div>
                 </div>
 
-                <form th:action="@{/logout}" method="post">
-                    <button type="submit">Logout</button>
-                </form>
             </div>
         </div>
     </div>
