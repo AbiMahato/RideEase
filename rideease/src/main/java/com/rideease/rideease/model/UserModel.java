@@ -1,6 +1,8 @@
 package com.rideease.rideease.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "user")
@@ -25,6 +27,9 @@ public class UserModel {
         this.id = id;
     }
 
+
+    @NotBlank(message = "first name cannot be empty")
+    @Size(min=3,max = 15,message="User name must be between 3 to 15")
     public String getFirstName() {
         return firstName;
     }
@@ -33,6 +38,8 @@ public class UserModel {
         this.firstName = firstName;
     }
 
+    @NotBlank(message = "Last name cannot be empty")
+    @Size(min=3,max = 15,message="Last name must be between 3 to 15")
     public String getLastName() {
         return lastName;
     }
@@ -41,6 +48,7 @@ public class UserModel {
         this.lastName = lastName;
     }
 
+    @NotBlank(message = "Email name cannot be empty")
     public String getEmail() {
         return email;
     }
@@ -49,6 +57,8 @@ public class UserModel {
         this.email = email;
     }
 
+
+    @NotBlank(message = "Password name cannot be empty")
     public String getPassword() {
         return password;
     }

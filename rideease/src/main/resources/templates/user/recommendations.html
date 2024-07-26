@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Recommended Vehicles</title>
+</head>
+<body>
+<h1>Recommended Vehicles</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Vehicle Type</th>
+        <th>Current Location</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="vehicle : ${recommendations}">
+        <td th:text="${vehicle.vehicleType}"></td>
+        <td th:text="${vehicle.currentLocation}"></td>
+    </tr>
+    </tbody>
+</table>
+<a href="/vehicle">Go Back</a>
+</body>
+</html>
