@@ -99,120 +99,28 @@
                 <div class="tab-content">
                     <div id="tab-1" class="tab-pane fade show p-0 active">
                         <div class="row g-4">
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+
+
+                            <a th:href="@{/lend}" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" th:each="lendDetail : ${lendDetail}">
                                 <div class="property-item rounded overflow-hidden">
                                     <div class="position-relative overflow-hidden">
-                                        <a href="/product"><img class="img-fluid img-resize" src="images/img1.jpg" alt=""></a>
+                                        <div><img class="img-fluid img-resize" th:src="@{${lendDetail.getVehicleImage()}}" alt=""></div>
                                         <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
                                         <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Van</div>
                                     </div>
                                     <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">Rs 1000</h5>
-                                        <a class="d-block h5 mb-2" href="">Van for rent</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Balkumari, KTM, NEPAL</p>
+                                        <h5 class="text-primary mb-3" th:text="${lendDetail.getPerDay()}">Rs 1000</h5>
+                                        <p class="d-block h5 mb-2"  th:text="${lendDetail.getVehicleName()}">Van for rent</p>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i><span th:text="${lendDetail.getPickUpLocation()}">Balkumari, KTM, NEPAL</span></p>
                                     </div>
                                     <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>5 Meters</small>
-                                        <small class="flex-fill text-center border-end py-2">8 seats</small>
-                                        <small class="flex-fill text-center py-2">2 wheelers</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i><span th:text="${lendDetail.getVehicleStatus()}">nice</span></small>
+                                        <small class="flex-fill text-center border-end py-2" th:text="${lendDetail.getMileage() + ' mileage'}"></small>
+                                        <small class="flex-fill text-center py-2" th:text="${lendDetail.getVehicleType()}">2 wheelers</small>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid img-resize" src="./images/thartharfrontview.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Thar</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">Rs 2000</h5>
-                                        <a class="d-block h5 mb-2" href="">Thar for rent</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Balkumari, KTM, NEPAL</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>3.5 Meters</small>
-                                        <small class="flex-fill text-center border-end py-2">4 seats</small>
-                                        <small class="flex-fill text-center py-2">4 wheelers</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid img-resize" src="images/xuv700xuv700rightfrontthreequarter (1).jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Suv</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">Rs 3000</h5>
-                                        <a class="d-block h5 mb-2" href="">Suv for rent</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Balkumari, KTM, NEPAL</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>4 Meters</small>
-                                        <small class="flex-fill text-center border-end py-2">5 seats</small>
-                                        <small class="flex-fill text-center py-2">2 wheelers</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid img-resize" src="images/pulsarns200pulsarnsrightsideview.png" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Pulsar</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">Rs 1000</h5>
-                                        <a class="d-block h5 mb-2" href="">Pulsar Ns200 for rent</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Balkumari, KTM, NEPAL</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1.5 Meters</small>
-                                        <small class="flex-fill text-center border-end py-2">2 seats</small>
-                                        <small class="flex-fill text-center py-2">2 wheelers</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid img-resize" src="images/200dukedarkgalvano2024.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Duke</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">Rs 1000</h5>
-                                        <a class="d-block h5 mb-2" href="">KTM 200 Duke for rent</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Balkumari, KTM, NEPAL</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1.5 Meters</small>
-                                        <small class="flex-fill text-center border-end py-2">2 seats</small>
-                                        <small class="flex-fill text-center py-2">2 wheelers</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid img-resize" src="images/xuv700xuv700rightfrontthreequarter.jpg" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Suv</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">Rs 3000</h5>
-                                        <a class="d-block h5 mb-2" href="">Suv for rent</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Balkumari, KTM, NEPAL</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>4 Meters</small>
-                                        <small class="flex-fill text-center border-end py-2">5 seats</small>
-                                        <small class="flex-fill text-center py-2">2 wheelers</small>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
+
                             <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
                                 <a class="btn btn-primary py-3 px-5" href="">Browse More Vehicles</a>
                             </div>

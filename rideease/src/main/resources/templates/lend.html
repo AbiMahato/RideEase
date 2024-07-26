@@ -16,7 +16,7 @@
             <div class="lend__container">
                 <p class="container__info_title">Enter your Information</p>
                 <hr>
-                <form action="#" method="post" th:action="@{/lend}" th:object="${lend}" >
+                <form action="#" method="post" th:action="@{/lend}" th:object="${lend}" enctype="multipart/form-data" >
                     <div class="form_container">
                         <div>
                             <p class="gap">Name</p>
@@ -134,13 +134,13 @@
                         <div>
                             <p class="gap">Upload your citizenship image</p>
                             <div class="form_field_doc ">
-                                <input type="file" class="choose_files" name="CitizenshipImage">
+                                <input type="file" class="choose_files" name="citizenshipImage">
                             </div>
                         </div>
                         <div>
                             <p class="gap">Proof of insurance coverage of vehicles</p>
                             <div class="form_field_doc ">
-                                <input type="file" class="choose_files" name="InsuranceProofImage">
+                                <input type="file" class="choose_files" name="insuranceProofImage">
                             </div>
                         </div>
                     </div>

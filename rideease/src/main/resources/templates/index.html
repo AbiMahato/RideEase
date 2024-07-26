@@ -194,150 +194,28 @@
                 <div class="tab-content">
                     <div id="tab-1" class="tab-pane fade show p-0 active">
                         <div class="row g-4">
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+
+                            <a th:href="@{/lend}" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" th:each="lendDetail ,iterStat  : ${lendDetail}" th:if="${iterStat.index < 6}">
                                 <div class="property-item rounded overflow-hidden">
                                     <div class="position-relative overflow-hidden">
-                                        <a href="/user/product"><img class="img-fluid" th:src="@{images/royal.jpg}"
-                                                                alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                                            For rent
-                                        </div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
-                                            bike
-                                        </div>
+                                        <div><img class="img-fluid img-resize" th:src="@{${lendDetail.getVehicleImage()}}" alt=""></div>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Van</div>
                                     </div>
                                     <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">Rs 500 per day</h5>
-                                        <a class="d-block h5 mb-2" href="">Bike for rent</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Putalisadak,Kathmandu
-                                        </p>
+                                        <h5 class="text-primary mb-3" th:text="${lendDetail.getPerDay()}">Rs 1000</h5>
+                                        <p class="d-block h5 mb-2"  th:text="${lendDetail.getVehicleName()}">Van for rent</p>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i><span th:text="${lendDetail.getPickUpLocation()}">Balkumari, KTM, NEPAL</span></p>
                                     </div>
                                     <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2">Rating : 4/5</small>
-                                        <small class="flex-fill text-center border-end py-2">Condition : Good</small>
-                                        <small class="flex-fill text-center py-2">Mileage : 30km/l</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i><span th:text="${lendDetail.getVehicleStatus()}">5 Meters</span></small>
+                                        <small class="flex-fill text-center border-end py-2" th:text="${lendDetail.getMileage() + ' mileage'}"></small>
+                                        <small class="flex-fill text-center py-2" th:text="${lendDetail.getVehicleType()}">2 wheelers</small>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" th:src="@{images/harley.jpg}" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                                            For rent
-                                        </div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
-                                            bike
-                                        </div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">Rs 10k per day</h5>
-                                        <a class="d-block h5 mb-2" href="">Bike for rent</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Thimi,Bhaktapur</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2">Rating : 4/5</small>
-                                        <small class="flex-fill text-center border-end py-2">Condition : Good</small>
-                                        <small class="flex-fill text-center py-2">Mileage : 10km/l</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" th:src="@{images/royal.jpg}" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                                            For rent
-                                        </div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
-                                            bike
-                                        </div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">Rs 500 per day</h5>
-                                        <a class="d-block h5 mb-2" href="">Bike for rent</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Putalisadak,Kathmandu
-                                        </p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2">Rating : 4/5</small>
-                                        <small class="flex-fill text-center border-end py-2">Condition : Good</small>
-                                        <small class="flex-fill text-center py-2">Mileage : 30km/l</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <h2 class="text-primary">Four Wheeler</h2>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" th:src="@{images/1000011860.jpg}" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                                            For rent
-                                        </div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
-                                            Four wheeler
-                                        </div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">Rs 1.5k per day</h5>
-                                        <a class="d-block h5 mb-2" href="">Four wheeler for rent</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Balkumari,Lalitpur</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2">Rating : 4/5</small>
-                                        <small class="flex-fill text-center border-end py-2">Condition : Good</small>
-                                        <small class="flex-fill text-center py-2">Mileage : 8km/l</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" th:src="@{images/1000011854.jpg}" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                                            For rent
-                                        </div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
-                                            Four wheeler
-                                        </div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">Rs 2k per day</h5>
-                                        <a class="d-block h5 mb-2" href="">Four wheeler for rent</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Balkumari,Lalitpur</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2">Rating : 4/5</small>
-                                        <small class="flex-fill text-center border-end py-2">Condition : Good</small>
-                                        <small class="flex-fill text-center py-2">Mileage : 8km/l</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" th:src="@{images/1000011859.jpg}" alt=""></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                                            For rent
-                                        </div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
-                                            four wheeler
-                                        </div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">Rs 1.5k per day</h5>
-                                        <a class="d-block h5 mb-2" href="">Four wheeler for rent</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Balkumari,Lalitpur</p>
-                                    </div>
-                                    <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2">Rating : 4/5</small>
-                                        <small class="flex-fill text-center border-end py-2">Condition : Good</small>
-                                        <small class="flex-fill text-center py-2">Mileage : 8km/l</small>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                             <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                                <a class="btn btn-primary py-3 px-5" href="/vehicle_list">Explore More</a>
+                                <a class="btn btn-primary py-3 px-5" th:href="@{/vehicle_list}">Explore More</a>
                             </div>
                         </div>
                     </div>
