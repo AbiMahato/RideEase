@@ -21,13 +21,13 @@
                         <div>
                             <p class="gap">Name</p>
                             <div class="form_field">
-                                <input type="text" name="name">
+                                <input type="text" name="name" required>
                             </div>
                         </div>
                         <div>
                             <p class="gap">Email</p>
                             <div class="form_field">
-                                <input type="email" name="email">
+                                <input type="email" name="email" required>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                         <div>
                             <p class="gap">Vehicle Name</p>
                             <div class="form_field">
-                                <input type="text" name="vehicleName">
+                                <input type="text" name="vehicleName" required>
                             </div>
                         </div>
 <!--                        <div>-->
@@ -47,8 +47,8 @@
 <!--                        </div>-->
                         <div>
                             <p class="gap">Vehicle Status</p>
-                            <div class="form_field">
-                                <select name="vehicleStatus">
+                            <div class="form_field" >
+                                <select name="vehicleStatus" required>
                                     <option>-Select Vehicle Status-</option>
                                     <option>Excellent</option>
                                     <option>Good</option>
@@ -61,14 +61,14 @@
                         <div>
                             <p class="gap">Phone number</p>
                             <div class="form_field">
-                                <input type="tel" name="number">
+                                <input type="tel" name="number" required maxlength="10">
                             </div>
                         </div>
 
                         <div>
                             <p class="gap">Current location</p>
                             <div class="form_field">
-                                <input type="text" name="currentLocation">
+                                <input type="text" name="currentLocation" required>
                             </div>
                         </div>
                     </div>
@@ -76,13 +76,13 @@
                         <div>
                             <p class="gap">Pick up location</p>
                             <div class="form_field">
-                                <input type="text" name="pickUpLocation">
+                                <input type="text" name="pickUpLocation" required>
                             </div>
                         </div>
                         <div>
                             <p class="gap">Drop off location</p>
                             <div class="form_field">
-                                <input type="text" name="dropOffLocation">
+                                <input type="text" name="dropOffLocation" required>
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                         <div>
                             <p class="gap">License plate no</p>
                             <div class="form_field">
-                                <input type="text" name="LicencePlateNumber">
+                                <input type="text" name="LicencePlateNumber" required>
                             </div>
                         </div>
                         <div>
@@ -111,13 +111,13 @@
                                 <div>
                                     <p class="price__ratetype">Per Day:</p>
                                     <div class="form_field1">
-                                        <input type="number" name="perDay">
+                                        <input type="number" name="perDay" required>
                                     </div>
                                 </div>
                                 <div class="price__div2">
                                     <p class="price__ratetype">Per Hour: &nbsp;</p>
                                     <div class="form_field1">
-                                        <input type="number" name="perHour">
+                                        <input type="number" name="perHour" required>
                                     </div>
                                 </div>
 
@@ -126,7 +126,7 @@
                         <div>
                             <p class="gap">Upload your Vehicle Image</p>
                             <div class="form_field_doc ">
-                                <input type="file" class="choose_files" name="vehicleImage">
+                                <input type="file" class="choose_files" name="vehicleImage" required>
                             </div>
                         </div>
                     </div>
@@ -134,13 +134,13 @@
                         <div>
                             <p class="gap">Upload your citizenship image</p>
                             <div class="form_field_doc ">
-                                <input type="file" class="choose_files" name="citizenshipImage">
+                                <input type="file" class="choose_files" name="citizenshipImage" required>
                             </div>
                         </div>
                         <div>
                             <p class="gap">Proof of insurance coverage of vehicles</p>
                             <div class="form_field_doc ">
-                                <input type="file" class="choose_files" name="insuranceProofImage">
+                                <input type="file" class="choose_files" name="insuranceProofImage" required>
                             </div>
                         </div>
                     </div>
@@ -149,14 +149,14 @@
                         <div>
                             <p class="gap">Mileage</p>
                             <div class="form_field">
-                                <input type="text"  name="mileage">
+                                <input type="text"  name="mileage" required>
                             </div>
                         </div>
                     </div>
                     <div>
                         <p class="gap">Vehicle Details</p>
                         <div class="form_field">
-                            <input type="text" name="vehicleDetails">
+                            <input type="text" name="vehicleDetails" required>
                         </div>
                     </div>
 

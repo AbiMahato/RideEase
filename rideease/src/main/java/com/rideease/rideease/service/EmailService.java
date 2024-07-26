@@ -19,16 +19,25 @@ public class EmailService {
 
 
     //Method to send email
-    public void sendEmail(String customerEmail, Optional<LendModel> vehicle) {
+    public void sendEmail(String customerEmail,String number, Optional<LendModel> vehicle) {
 
-            String subject="RideEase";
-            String message="Your have book vehicle from Ride Ease";
 
-          String subject1="RideEase";
-          String message1="Your vehicle have been booked by Ride Ease";
 
         if (vehicle.isPresent()) {
             LendModel abc = vehicle.get();
+
+            String subject="RideEase";
+            String message="Dear Customer.You have booked vehicle from Ride Ease. " +
+                    "\n Vehicle Name: "+abc.getVehicleName()+
+                    "\n Phone Number : "+abc.getNumber()+
+                    "\n Vehicle Location: "+abc.getCurrentLocation()+
+                    "\n Vehicle Condition: "+abc.getVehicleStatus()+
+                    "\n Vehicle Cost per Day: "+abc.getPerDay()+
+                    "\n Vehicle Details: "+abc.getVehicleDetails();
+
+
+            String subject1="RideEase";
+            String message1="Your vehicle have been booked by "+customerEmail + "\nPhone number: "+number;
 
             SimpleMailMessage email = new SimpleMailMessage();
             email.setTo(customerEmail);
