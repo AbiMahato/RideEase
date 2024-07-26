@@ -156,6 +156,8 @@
 
 .admin-table-wrapper{
     /* padding:40px; */
+    width: calc(100% - 375px);
+    overflow-x: scroll;
     padding-top: 0;
     margin-left: 350px;
 }

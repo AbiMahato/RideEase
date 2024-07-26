@@ -1,7 +1,7 @@
 package com.rideease.rideease.service;
 
-import com.rideease.rideease.model.VehicleAI;
-import com.rideease.rideease.repository.VehicleAIRepository;
+import com.rideease.rideease.model.LendModel;
+import com.rideease.rideease.repository.LendRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,21 +12,21 @@ import java.util.stream.Collectors;
 public class VehicleAIService {
 
     @Autowired
-    private VehicleAIRepository vehicleAIRepository;
+    private LendRepository lendRepository;
 
     //FETCH ALL VEHICLE FROM REPOSITORY
-    public List<VehicleAI> getAllVehicles() {
-        return vehicleAIRepository.findAll();
+    public List<LendModel> getAllVehicles() {
+        return lendRepository.findAll();
     }
 
     // Fetch a specific vehicle by its ID
-    public VehicleAI getVehicleById(Long id) {
-        return vehicleAIRepository.findById(id).orElse(null);
+    public LendModel getVehicleById(Long id) {
+        return lendRepository.findById(id).orElse(null);
     }
 
     // Recommend similar vehicles based on vehicle type and current location
-    public List<VehicleAI> recommendSimilarVehicles(VehicleAI selectedVehicle) {
-        List<VehicleAI> allVehicles = vehicleAIRepository.findAll();
+    public List<LendModel> recommendSimilarVehicles(LendModel selectedVehicle) {
+        List<LendModel> allVehicles = lendRepository.findAll();
         return allVehicles.stream()
                 .filter(vehicle -> !vehicle.getId().equals(selectedVehicle.getId()))
                 .sorted((v1, v2) -> Double.compare(
@@ -36,18 +36,30 @@ public class VehicleAIService {
     }
 
     // Calculate cosine similarity between two vehicles
-    private double calculateCosineSimilarity(VehicleAI v1, VehicleAI v2) {
+    private double calculateCosineSimilarity(LendModel v1, LendModel v2) {
         String type1 = v1.getVehicleType();
         String type2 = v2.getVehicleType();
         String location1 = v1.getCurrentLocation();
         String location2 = v2.getCurrentLocation();
+        String name1 = v1.getVehicleName();
+        String name2 = v2.getVehicleName();
+        String status1 = v1.getVehicleStatus();
+        String status2 = v2.getVehicleStatus();
 
-        double dotProduct = (type1.equals(type2) ? 1 : 0) + (location1.equals(location2) ? 1 : 0);
-        double magnitude1 = Math.sqrt(2); // Since we have 2 fields
-        double magnitude2 = Math.sqrt(2); // Since we have 2 fields
+        double dotProduct = 0;
+        dotProduct += (type1.equals(type2) ? 1 : 0);
+        dotProduct += (location1.equals(location2) ? 1 : 0);
+        dotProduct += (name1.equals(name2) ? 1 : 0);
+        dotProduct += (status1.equals(status2) ? 1 : 0);
 
+        // Calculate magnitudes
+        double magnitude1 = Math.sqrt(4); // Since we have 4 fields
+        double magnitude2 = Math.sqrt(4); // Since we have 4 fields
+
+        // Calculate cosine similarity
         return dotProduct / (magnitude1 * magnitude2);
     }
+
 
 }
 

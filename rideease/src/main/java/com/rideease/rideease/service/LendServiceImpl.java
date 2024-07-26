@@ -30,4 +30,8 @@ public class LendServiceImpl implements LendService {
         return lendRepository.findById(id);
 
     }
+    @Override
+    public void deleteVehicleById(Long id) {
+        lendRepository.deleteById(id);
+    }
 }
