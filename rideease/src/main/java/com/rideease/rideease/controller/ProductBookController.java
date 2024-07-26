@@ -37,9 +37,9 @@ public class ProductBookController {
     @Autowired
     private EmailService emailService;
     @PostMapping("/user/product")
-    public String submitProductBook(@RequestParam("email") String email, @RequestParam("id") long id ,ProductBook productBook, Model model) {
+    public String submitProductBook(@RequestParam("email") String email,@RequestParam("number") String number, @RequestParam("id") long id ,ProductBook productBook, Model model) {
         Optional<LendModel> vehicle = lendService.getVehicleById(id);
-        emailService.sendEmail(email,vehicle);
+        emailService.sendEmail(email,number,vehicle);
 
         model.addAttribute("SuccessMessage", "Your email has been sent successfully.");
 

@@ -14,10 +14,10 @@
 <nav class="navbar">
     <div class="navbar_div">
         <div class="logo" >
-            <img src="images/logo/logo-black.png" alt="this is logo">
+            <img src="/images/logo/logo-black.png" alt="this is logo">
         </div>
         <ul type="none" class="list">
-            <li><a href="" class="nav_element nav1"><i class="fa-solid fa-table-columns"></i>&nbsp;Dashboard</a></li>
+            <li><a th:href="@{/admin/admin_dashboard}" class="nav_element nav1"><i class="fa-solid fa-table-columns"></i>&nbsp;Dashboard</a></li>
             <li class="nav_element nav2">
                 <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fa-solid fa-file-lines" style="color: white;"></i> Vehicle Management
@@ -52,9 +52,9 @@
     <div class="admin-header">
         <div class="page-title">Admin Dashboard</div>
         <div class="profile-info">
-            <p class="profile-username">username</p>
+            <p class="profile-username">Admin</p>
             <div class="profile-img">
-                <img src="images/2477.jpg" alt="">
+                <img src="/images/2477.jpg" alt="">
             </div>
         </div>
     </div>

@@ -16,10 +16,10 @@
 <nav class="navbar">
     <div class="navbar_div">
         <div class="logo" >
-            <img src="images/logo/logo-black.png" alt="this is logo">
+            <img src="/images/logo/logo-black.png" alt="this is logo">
         </div>
         <ul type="none" class="list">
-            <li><a href="" class="nav_element nav1"><i class="fa-solid fa-table-columns"></i>&nbsp;Dashboard</a></li>
+            <li><a th:href="@{/admin/admin_dashboard}" class="nav_element nav1"><i class="fa-solid fa-table-columns"></i>&nbsp;Dashboard</a></li>
             <li class="nav_element nav2">
                 <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fa-solid fa-file-lines" style="color: white;"></i> Vehicle Management
@@ -27,7 +27,7 @@
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body">
                         <ul>
-                            <li><a href="">All Vehicle</a></li>
+                            <li><a th:href="@{/admin/admin_all_vehicles}">All Vehicle</a></li>
                             <li><a href="">Pending Vehicle</a></li>
                             <li><a href="">Approved Vehicle</a></li>
                             <li><a href="">Archived Vehicle</a></li>
@@ -38,7 +38,7 @@
             <li><a href="#" class="nav_element nav3"><i class="fa-solid fa-id-badge"></i>&nbsp;My profile</a></li>
             <li><a href="#" class="nav_element nav4"><i class="fa-solid fa-user"></i>&nbsp;Customer Information</a></li>
             <li><a href="#" class="nav_element nav5"><i class="fa-solid fa-file"></i>&nbsp;Vehicle Owners</a></li>
-            <li><a href="#" class="nav_element nav5"><i class="fa-solid fa-address-card"></i>&nbsp;Customer Feedback</a></li>.
+            <li><a th:href="@{/admin/admin_contactus}" class="nav_element nav5"><i class="fa-solid fa-address-card"></i>&nbsp;Customer Feedback</a></li>.
             <li>
                 <form th:action="@{/logout}" method="post">
                     <button type="submit">Logout</button>
@@ -53,9 +53,9 @@
     <div class="admin-header">
         <div class="page-title">Customer Feedback</div>
         <div class="profile-info">
-            <p class="profile-username">username</p>
+            <p class="profile-username">Admin</p>
             <div class="profile-img">
-                <img src="images/2477.jpg" alt="">
+                <img src="/images/2477.jpg" alt="">
             </div>
         </div>
     </div>

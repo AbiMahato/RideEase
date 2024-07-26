@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
-
+<style>
+    .inline-span {
+        display: inline;
+        margin-right: 5px; /* optional, to add some space between the elements */
+    }
+</style>
 <head>
     <meta charset="utf-8">
     <title>RideEase</title>
@@ -19,21 +24,49 @@
 
             </div>
             <div class="right">
-                <div th:text="${vehicle.getId()}"></div>
-                <div th:text="${vehicle.getName()}"></div>
-                <div th:text="${vehicle.getEmail()}"></div>
-                <div th:text="${vehicle.getNumber()}"></div>
-                <div th:text="${vehicle.getVehicleName()}"></div>
-                <div th:text="${vehicle.getVehicleStatus()}"></div>
-                <div th:text="${vehicle.getCurrentLocation()}"></div>
-                <div th:text="${vehicle.getPickUpLocation()}"></div>
-                <div th:text="${vehicle.getDropOffLocation()}"></div>
-                <div th:text="${vehicle.getLicencePlateNumber()}"></div>
-                <div th:text="${vehicle.getVehicleType()}"></div>
-                <div th:text="${vehicle.getPerDay()}"></div>
-                <div th:text="${vehicle.getPerHour()}"></div>
-                <div th:text="${vehicle.getMileage()}"></div>
-                <div th:text="${vehicle.getVehicleDetails()}"></div>
+                <div th:text="${vehicle.getId()}" style="display:none;"></div>
+                <span class="inline-span" style="color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;">User Name:</span>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;" th:text="${vehicle.getName()}">\n</span>
+                <div></div>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;">Email:</span>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;" th:text="${vehicle.getEmail()}">\n</span>
+                <div></div>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;">Phone Number:</span>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;" th:text="${vehicle.getNumber()}"></span>
+                <div></div>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;">Vehicle Name:</span>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;" th:text="${vehicle.getVehicleName()}"></span>
+                <div></div>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;">Vehicle Condition:</span>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;" th:text="${vehicle.getVehicleStatus()}"></span>
+                <div></div>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;">Current Location:</span>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;" th:text="${vehicle.getCurrentLocation()}"></span>
+                <div></div>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;">PickUp Location:</span>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;" th:text="${vehicle.getPickUpLocation()}"></span>
+                <div></div>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;">DropOff Location:</span>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;" th:text="${vehicle.getDropOffLocation()}"></span>
+                <div></div>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;">Plate Number:</span>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;" th:text="${vehicle.getLicencePlateNumber()}"></span>
+                <div></div>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;">Vehicle Type:</span>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;" th:text="${vehicle.getVehicleType()}"></span>
+                <div></div>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;">Per Day: Rs</span>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;" th:text="${vehicle.getPerDay()}"></span>
+                <div></div>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;">Per Hour: Rs</span>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;" th:text="${vehicle.getPerHour()}"></span>
+                <div></div>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;">Mileage:</span>
+                <span class="inline-span" style=" color: #0E2E50; display: inline; margin-right: 5px; font-weight: bold;" th:text="${vehicle.getMileage() + 'km/L'}"></span>
+                <div></div>
+<!--                <span class="inline-span">Vehicle Details:</span>-->
+<!--                <span class="inline-span" th:text="${vehicle.getVehicleDetails()}"></span>-->
+
                 <!-- <button>Rent Now</button> -->
 
                 <!-- Button trigger modal -->
@@ -56,11 +89,11 @@
                                     <p class="containerheader">Fill the form</p><hr color="black">
                                     <form action="#"  method="post" th:action="@{/user/product}" th:object="${productBook}">
 
-                                        <p><label>id*:</label><input type="text" name="id" th:value="${vehicle.getId()}" required class="textare form1"></p>
-                                        <p><label>Name*:</label><input type="text" name="name" required class="textare form1"></p>
-                                        <p><label>Email*:</label><input type="email" name="email" required class="textare form2"></p>
-                                        <p><label>Number*:</label><input type="number" name="number" required class="textare form3"></p>
-                                        <p><label>Address*:</label><input type="text" name="address" required class="textare form4"></p>
+                                        <p><label style="display: none">id*:</label><input type="text" name="id" th:value="${vehicle.getId()}" required class="textare form1" style="display:none;"></p>
+                                        <p><label>Name*:</label><input type="text" name="name" required class="textare form1" style="width:100%"></p>
+                                        <p><label>Email*:</label><input type="email" name="email" required class="textare form2"style="width:100%" maxlength="10"></p>
+                                        <p><label>Number*:</label><input type="number" name="number" required class="textare form3" style="width:100%"></p>
+                                        <p><label>Address*:</label><input type="text" name="address" required class="textare form4" style="width:100%"></p>
                                         <p><label>Citizenship photo*:<input type="file" name="ctz" required class=" form5"></label></p>
                                         <p><label>license photo*:<input type="file" name="lic" required class=" form6"></label></p>
 
