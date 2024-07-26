@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.security.Principal;
@@ -92,6 +94,12 @@ public class MainController {
         model.addAttribute("lendDetail", lendDetail);
         model.addAttribute("page", "admin_all_vehicles");
         return "admin/admin_all_vehicles";
+    }
+
+    @PostMapping("/delete/{id}")
+    public String deleteVehicle(@PathVariable Long id) {
+        lendService.deleteVehicleById(id);
+        return "redirect:/admin/admin_all_vehicles"; // Redirect to the list of vehicles or another appropriate page
     }
 
 

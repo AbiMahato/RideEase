@@ -80,6 +80,33 @@
             <button type="submit">Logout</button>
         </form>
     </div>
+
+    <div class="recommendations">
+        <h2>Recommendations</h2><br>
+        <div class="recommendation-container">
+            <a th:href="@{/user/product/{id}(id=${recommendations.id})}" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" th:each="recommendations ,iterStat  : ${recommendations}" th:if="${iterStat.index < 3}">
+                <div class="property-item rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <div><img class="img-fluid img-resize" th:src="@{${recommendations.getVehicleImage()}}" alt=""></div>
+                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Vehicle</div>
+                    </div>
+                    <div class="p-4 pb-0">
+                        <h5 class="text-primary mb-3" th:text=" ${ 'Rs ' +  recommendations.getPerDay() + ' per Day'}">Rs 1000</h5>
+                        <p class="d-block h5 mb-2"  th:text="${recommendations.getVehicleName()}">Van for rent</p>
+                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i><span th:text="${recommendations.getPickUpLocation()}">Balkumari, KTM, NEPAL</span></p>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-2"><span th:text="${ 'Condition: ' + recommendations.getVehicleStatus()}">5 Meters</span></small>
+                        <small class="flex-fill text-center border-end py-2" th:text="${recommendations.getMileage() + ' Mileage'}"></small>
+                        <small class="flex-fill text-center py-2" th:text="${ 'Type: ' + recommendations.getVehicleType()}"></small>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
 </section>
 </body>
 

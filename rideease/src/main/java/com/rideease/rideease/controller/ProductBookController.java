@@ -6,12 +6,14 @@ import com.rideease.rideease.repository.LendRepository;
 import com.rideease.rideease.service.EmailService;
 import com.rideease.rideease.service.LendService;
 import com.rideease.rideease.service.ProductBookService;
+import com.rideease.rideease.service.VehicleAIService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -20,6 +22,8 @@ public class ProductBookController {
     private ProductBookService productBookService;
     @Autowired
     private LendService lendService;
+    @Autowired
+    private VehicleAIService vehicleAIService;
 
     @GetMapping("/user/product/{id}")
     public String showProductBookForm(@PathVariable("id") Long id, Model model) {
@@ -28,6 +32,11 @@ public class ProductBookController {
             model.addAttribute("vehicle", vehicle.get());
             model.addAttribute("productBook", new ProductBook());
             model.addAttribute("page", "product");
+
+            LendModel selectedVehicle = vehicleAIService.getVehicleById(id);
+            List<LendModel> recommendations = vehicleAIService.recommendSimilarVehicles(selectedVehicle);
+            model.addAttribute("recommendations", recommendations);
+            System.out.println(recommendations);
             return "/user/product";
         } else {
             return "/index"; // Return an error page if the card is not found

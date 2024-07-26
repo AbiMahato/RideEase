@@ -11,5 +11,5 @@ public interface LendService {
     List<LendModel> getLendDetails();
     List<LendModel> searchVehicles(String current_location, String vehicle_type);
     Optional<LendModel> getVehicleById(Long id);
-
+    void deleteVehicleById(Long id);
 }
