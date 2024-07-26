@@ -8,4 +8,5 @@ import java.util.List;
 public interface LendService {
     void saveLendDetails(LendModel lend);
     List<LendModel> getLendDetails();
+    List<LendModel> searchVehicles(String current_location, String vehicle_type);
 }
