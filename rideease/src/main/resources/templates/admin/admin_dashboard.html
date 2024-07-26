@@ -37,6 +37,11 @@
             <li><a href="#" class="nav_element nav4"><i class="fa-solid fa-user"></i>&nbsp;Customer Information</a></li>
             <li><a href="#" class="nav_element nav5"><i class="fa-solid fa-file"></i>&nbsp;Vehicle Owners</a></li>
             <li><a th:href="@{/admin/admin_contact_us}" class="nav_element nav5"><i class="fa-solid fa-address-card"></i>&nbsp;Customer Feedback</a></li>
+            <li>
+                <form th:action="@{/logout}" method="post">
+                    <button type="submit">Logout</button>
+                </form>
+            </li>
         </ul>
     </div>
 </nav>

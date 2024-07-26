@@ -35,9 +35,6 @@
     <link th:if="${page == 'contactus'}" rel="stylesheet" th:href="@{/css/contactus.css}">
     <link th:if="${page == 'lend'}" rel="stylesheet" th:href="@{/css/lend.css}">
     <link th:if="${page == 'product'}" rel="stylesheet" th:href="@{/css/demoproduct.css}">
-    <!-- Exzoom and ImagesLoaded Stylesheets -->
-    <link th:if="${page == 'product'}" th:href="@{css/jquery.exzoom.css}" rel="stylesheet" type="text/css"/>
-
 
 </head>
 <body>
@@ -76,40 +73,6 @@
 
 <!--  Javascript -->
 <script th:src="@{/js/main.js}"></script>
-
-
-<!-- Exzoom and ImagesLoaded Scripts -->
-<div th:if="${page == 'product'}">
-    <script src="https://unpkg.com/imagesloaded@4.1.4/imagesloaded.pkgd.min.js"></script>
-    <script th:src="@{/js/jquery.exzoom.js}"></script>
-
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.container').imagesLoaded(function () {
-                $("#exzoom").exzoom({
-                    autoPlay: false,
-                });
-                $("#exzoom").removeClass('hidden');
-            });
-        });
-    </script>
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-36251023-1']);
-        _gaq.push(['_setDomainName', 'jqueryscript.net']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-</div>
 
 </body>
 </html>

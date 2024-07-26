@@ -4,7 +4,6 @@ package com.rideease.rideease.controller;
 import com.rideease.rideease.model.ContactUsModel;
 import com.rideease.rideease.model.LendModel;
 import com.rideease.rideease.service.ContactUsService;
-import com.rideease.rideease.service.EmailService;
 import com.rideease.rideease.service.LendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -41,18 +40,12 @@ public class MainController {
 
 
 
-    @GetMapping("/user/product")
-    public String product(Model model , Principal principal) {
-        System.out.println(principal.getName());
-        model.addAttribute("page", "product");
-        return "user/product";
-    }
-
-    @GetMapping("/user/demoproduct")
-    public String demoproduct(Model model ) {
-        model.addAttribute("page", "product");
-        return "user/demoproduct";
-    }
+//    @GetMapping("/user/product")
+//    public String product(Model model , Principal principal) {
+//        System.out.println(principal.getName());
+//        model.addAttribute("page", "product");
+//        return "user/product";
+//    }
 
     @GetMapping("/vehicle_list")
     public String vehicleList(Model model) {
