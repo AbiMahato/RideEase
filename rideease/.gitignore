@@ -33,4 +33,5 @@ build/
 .vscode/
 
 # Ignore specific files
-application.properties
+/uploads/
+

@@ -16,8 +16,13 @@ import java.util.List;
 @Controller
 public class MainController {
 
+    @Autowired
+    private LendService lendService;
+
     @GetMapping("/")
     public String home(Model model) {
+        List<LendModel> lendDetail =lendService.getLendDetails();
+        model.addAttribute("lendDetail", lendDetail);
         model.addAttribute("page", "index");
         return "index";
     }
@@ -44,6 +49,8 @@ public class MainController {
 
     @GetMapping("/vehicle_list")
     public String vehicleList(Model model) {
+        List<LendModel> lendDetail =lendService.getLendDetails();
+        model.addAttribute("lendDetail", lendDetail);
         model.addAttribute("page", "vehiclelist");
         return "vehicle_list";
     }
@@ -67,8 +74,7 @@ public class MainController {
         return "admin/admin_dashboard";
     }
 
-    @Autowired
-    private LendService lendService;
+
     @GetMapping("/admin/admin_all_vehicles")
     public String admin_all_vehicles(Model model) {
         List<LendModel> lendDetail =lendService.getLendDetails();

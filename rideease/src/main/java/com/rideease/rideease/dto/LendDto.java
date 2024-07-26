@@ -1,14 +1,8 @@
-package com.rideease.rideease.model;
+package com.rideease.rideease.dto;
 
-import jakarta.persistence.*;
+import org.springframework.web.multipart.MultipartFile;
 
-@Entity
-@Table(name = "Lend")
-public class LendModel {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+public class LendDto {
     private String name;
     private String email;
     private String number;
@@ -21,19 +15,11 @@ public class LendModel {
     private String vehicleType;
     private float perDay;
     private float perHour;
-    private String vehicleImage;
-    private String citizenshipImage;
-    private String insuranceProofImage;
+    private MultipartFile vehicleImage;
+    private MultipartFile  citizenshipImage;
+    private MultipartFile insuranceProofImage;
     private String mileage;
     private String vehicleDetails;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -83,20 +69,20 @@ public class LendModel {
         this.currentLocation = currentLocation;
     }
 
-    public String getPickUpLocation() {
-        return pickUpLocation;
-    }
-
-    public void setPickUpLocation(String pickUpLocation) {
-        this.pickUpLocation = pickUpLocation;
-    }
-
     public String getDropOffLocation() {
         return dropOffLocation;
     }
 
     public void setDropOffLocation(String dropOffLocation) {
         this.dropOffLocation = dropOffLocation;
+    }
+
+    public String getPickUpLocation() {
+        return pickUpLocation;
+    }
+
+    public void setPickUpLocation(String pickUpLocation) {
+        this.pickUpLocation = pickUpLocation;
     }
 
     public String getLicencePlateNumber() {
@@ -131,27 +117,27 @@ public class LendModel {
         this.perHour = perHour;
     }
 
-    public String getVehicleImage() {
+    public MultipartFile getVehicleImage() {
         return vehicleImage;
     }
 
-    public void setVehicleImage(String vehicleImage) {
+    public void setVehicleImage(MultipartFile vehicleImage) {
         this.vehicleImage = vehicleImage;
     }
 
-    public String getCitizenshipImage() {
+    public MultipartFile getCitizenshipImage() {
         return citizenshipImage;
     }
 
-    public void setCitizenshipImage(String citizenshipImage) {
+    public void setCitizenshipImage(MultipartFile citizenshipImage) {
         this.citizenshipImage = citizenshipImage;
     }
 
-    public String getInsuranceProofImage() {
+    public MultipartFile getInsuranceProofImage() {
         return insuranceProofImage;
     }
 
-    public void setInsuranceProofImage(String insuranceProofImage) {
+    public void setInsuranceProofImage(MultipartFile insuranceProofImage) {
         this.insuranceProofImage = insuranceProofImage;
     }
 
