@@ -101,22 +101,22 @@
                         <div class="row g-4">
 
 
-                            <a th:href="@{/lend}" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" th:each="lendDetail : ${lendDetail}">
+                            <a th:href="@{/user/product/{id}(id=${lendDetail.id})}" class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" th:each="lendDetail : ${lendDetail}">
                                 <div class="property-item rounded overflow-hidden">
                                     <div class="position-relative overflow-hidden">
                                         <div><img class="img-fluid img-resize" th:src="@{${lendDetail.getVehicleImage()}}" alt=""></div>
                                         <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Van</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Vehicle</div>
                                     </div>
                                     <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3" th:text="${lendDetail.getPerDay()}">Rs 1000</h5>
+                                        <h5 class="text-primary mb-3" th:text="${'Rs '+lendDetail.getPerDay() +' per day '}">Rs 1000</h5>
                                         <p class="d-block h5 mb-2"  th:text="${lendDetail.getVehicleName()}">Van for rent</p>
                                         <p><i class="fa fa-map-marker-alt text-primary me-2"></i><span th:text="${lendDetail.getPickUpLocation()}">Balkumari, KTM, NEPAL</span></p>
                                     </div>
                                     <div class="d-flex border-top">
-                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i><span th:text="${lendDetail.getVehicleStatus()}">nice</span></small>
-                                        <small class="flex-fill text-center border-end py-2" th:text="${lendDetail.getMileage() + ' mileage'}"></small>
-                                        <small class="flex-fill text-center py-2" th:text="${lendDetail.getVehicleType()}">2 wheelers</small>
+                                        <small class="flex-fill text-center border-end py-2"><span th:text="${'Condition ' +lendDetail.getVehicleStatus()}">nice</span></small>
+                                        <small class="flex-fill text-center border-end py-2" th:text="${lendDetail.getMileage() + ' Mileage'}"></small>
+                                        <small class="flex-fill text-center py-2" th:text="${'Type: '+lendDetail.getVehicleType()}">2 wheelers</small>
                                     </div>
                                 </div>
                             </a>

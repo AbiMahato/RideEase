@@ -51,18 +51,12 @@ public class MainController {
 
 
 
-    @GetMapping("/user/product")
-    public String product(Model model , Principal principal) {
-        System.out.println(principal.getName());
-        model.addAttribute("page", "product");
-        return "user/product";
-    }
-
-    @GetMapping("/user/demoproduct")
-    public String demoproduct(Model model ) {
-        model.addAttribute("page", "product");
-        return "user/demoproduct";
-    }
+//    @GetMapping("/user/product")
+//    public String product(Model model , Principal principal) {
+//        System.out.println(principal.getName());
+//        model.addAttribute("page", "product");
+//        return "user/product";
+//    }
 
     @GetMapping("/vehicle_list")
     public String vehicleList(Model model) {

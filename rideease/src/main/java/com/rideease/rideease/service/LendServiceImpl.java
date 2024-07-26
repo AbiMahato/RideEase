@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class LendServiceImpl implements LendService {
@@ -19,8 +20,13 @@ public class LendServiceImpl implements LendService {
     public List<LendModel> getLendDetails(){
         return lendRepository.findAll();
     }
-
+  
+    
     public List<LendModel> searchVehicles(String current_location, String vehicle_type) {
         return lendRepository.findByCurrentLocationAndVehicleType(current_location, vehicle_type);
+    @Override
+    public Optional<LendModel> getVehicleById(Long id) {
+        return lendRepository.findById(id);
+
     }
 }
