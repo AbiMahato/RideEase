@@ -20,10 +20,19 @@ public class LendServiceImpl implements LendService {
     public List<LendModel> getLendDetails(){
         return lendRepository.findAll();
     }
-  
-    
-    public List<LendModel> searchVehicles(String current_location, String vehicle_type) {
-        return lendRepository.findByCurrentLocationAndVehicleType(current_location, vehicle_type);
+
+
+    @Override
+    public List<LendModel> searchVehicles(String location, String vehicleType) {
+        if (location != null && vehicleType != null) {
+            return lendRepository.findByLocationAndVehicleType(location, vehicleType);
+        } else if (location != null) {
+            return lendRepository.findByLocation(location);
+        } else if (vehicleType != null) {
+            return lendRepository.findByVehicleType(vehicleType);
+        } else {
+            return lendRepository.findAll();
+        }
     }
     @Override
     public Optional<LendModel> getVehicleById(Long id) {

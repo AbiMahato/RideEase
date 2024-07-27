@@ -23,17 +23,8 @@ public class MainController {
     private LendService lendService;
 
     @GetMapping("/")
-    public String home(@RequestParam(value = "currentLocation", required = false) String currentLocation,
-                       @RequestParam(value = "vehicleType", required = false) String vehicleType,
-                       Model model) {
-
-        List<LendModel> lendDetail;
-        if (currentLocation == null || vehicleType == null) {
-            lendDetail = lendService.getLendDetails();
-        } else {
-            lendDetail = lendService.searchVehicles(currentLocation, vehicleType);
-        }
-
+    public String home(Model model) {
+        List<LendModel> lendDetail = lendService.getLendDetails();
         model.addAttribute("lendDetail", lendDetail);
         model.addAttribute("page", "index");
         return "index";
@@ -61,8 +52,16 @@ public class MainController {
 //    }
 
     @GetMapping("/vehicle_list")
-    public String vehicleList(Model model) {
-        List<LendModel> lendDetail =lendService.getLendDetails();
+    public String vehicleList(
+            @RequestParam(value = "location", required = false) String location,
+            @RequestParam(value = "vehicleType", required = false) String vehicleType,
+            Model model) {
+        List<LendModel> lendDetail;
+        if (location != null || vehicleType != null) {
+            lendDetail = lendService.searchVehicles(location, vehicleType);
+        } else {
+            lendDetail = lendService.getLendDetails();
+        }
         model.addAttribute("lendDetail", lendDetail);
         model.addAttribute("page", "vehiclelist");
         return "vehicle_list";

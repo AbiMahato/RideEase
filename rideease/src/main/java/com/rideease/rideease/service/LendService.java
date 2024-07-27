@@ -9,7 +9,7 @@ import java.util.Optional;
 public interface LendService {
     void saveLendDetails(LendModel lend);
     List<LendModel> getLendDetails();
-    List<LendModel> searchVehicles(String current_location, String vehicle_type);
+    List<LendModel> searchVehicles(String location, String vehicleType);
     Optional<LendModel> getVehicleById(Long id);
     void deleteVehicleById(Long id);
 }
