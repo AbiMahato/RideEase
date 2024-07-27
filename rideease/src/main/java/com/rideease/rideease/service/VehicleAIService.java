@@ -43,14 +43,11 @@ public class VehicleAIService {
         String location2 = v2.getCurrentLocation();
         String name1 = v1.getVehicleName();
         String name2 = v2.getVehicleName();
-        String status1 = v1.getVehicleStatus();
-        String status2 = v2.getVehicleStatus();
 
         double dotProduct = 0;
         dotProduct += (type1.equals(type2) ? 1 : 0);
         dotProduct += (location1.equals(location2) ? 1 : 0);
         dotProduct += (name1.equals(name2) ? 1 : 0);
-        dotProduct += (status1.equals(status2) ? 1 : 0);
 
         // Calculate magnitudes
         double magnitude1 = Math.sqrt(4); // Since we have 4 fields

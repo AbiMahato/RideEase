@@ -1,7 +1,6 @@
 package com.rideease.rideease.controller;
 
 import com.rideease.rideease.dto.LendDto;
-import com.rideease.rideease.model.ContactUsModel;
 import com.rideease.rideease.model.LendModel;
 import com.rideease.rideease.service.LendService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,13 +24,13 @@ public class LendController {
     @Autowired
     private LendService lendService;
 
-    @GetMapping("/lend")
+    @GetMapping("/user/lend")
     public String showLendForm(Model model) {
         model.addAttribute("lend", new LendModel());
         model.addAttribute("page", "lend");
-        return "lend";
+        return "user/lend";
     }
-    @PostMapping("/lend")
+    @PostMapping("/user/lend")
     public String submitLendForm(LendDto lendDto, @RequestParam("vehicleImage") MultipartFile vehicleImage ,@RequestParam("citizenshipImage") MultipartFile citizenshipImage ,@RequestParam("insuranceProofImage") MultipartFile insuranceProofImage) throws IOException {
         File directory = new File(uploadFolder);
         if (!directory.exists()) {
@@ -78,6 +77,6 @@ public class LendController {
 
         lendService.saveLendDetails(lendModel);
 
-        return "redirect:/lend";
+        return "redirect:/user/lend";
     }
 }
