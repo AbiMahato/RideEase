@@ -19,12 +19,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto">
-                <a th:href="@{/}" class="nav-item nav-link active">Home</a>
-                <a th:href="@{/aboutus}" class="nav-item nav-link">About US</a>
-                <a th:href="@{/contactus}" class="nav-item nav-link">contact</a>
+                <a th:href="@{/}" th:classappend="${page == 'index'} ? 'active'" class="nav-item nav-link">Home</a>
+                <a th:href="@{/aboutus}" th:classappend="${page == 'aboutus'} ? 'active'" class="nav-item nav-link">About Us</a>
+
+                <a th:href="@{/contactus}" th:classappend="${page == 'contactus'} ? 'active'" class="nav-item nav-link">contact</a>
                 <a th:href="@{/login}" class="nav-item nav-link">Log in</a>
             </div>
-            <a th:href="@{user/lend}" class="btn btn-primary px-3 d-none d-lg-flex">Add vehicle</a>
+            <a th:href="@{/user/lend}" class="btn btn-primary px-3 d-none d-lg-flex">Add vehicle</a>
 
         </div>
     </nav>
