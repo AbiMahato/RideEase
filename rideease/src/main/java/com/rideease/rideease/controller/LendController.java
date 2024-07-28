@@ -28,7 +28,7 @@ public class LendController {
     public String showLendForm(Model model) {
         model.addAttribute("lend", new LendModel());
         model.addAttribute("page", "lend");
-        return "user/lend";
+        return "/user/lend";
     }
     @PostMapping("/user/lend")
     public String submitLendForm(LendDto lendDto, @RequestParam("vehicleImage") MultipartFile vehicleImage ,@RequestParam("citizenshipImage") MultipartFile citizenshipImage ,@RequestParam("insuranceProofImage") MultipartFile insuranceProofImage) throws IOException {
