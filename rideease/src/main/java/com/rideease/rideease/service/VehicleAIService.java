@@ -14,17 +14,14 @@ public class VehicleAIService {
     @Autowired
     private LendRepository lendRepository;
 
-    //FETCH ALL VEHICLE FROM REPOSITORY
     public List<LendModel> getAllVehicles() {
         return lendRepository.findAll();
     }
 
-    // Fetch a specific vehicle by its ID
     public LendModel getVehicleById(Long id) {
         return lendRepository.findById(id).orElse(null);
     }
 
-    // Recommend similar vehicles based on vehicle type and current location
     public List<LendModel> recommendSimilarVehicles(LendModel selectedVehicle) {
         List<LendModel> allVehicles = lendRepository.findAll();
         return allVehicles.stream()
@@ -35,33 +32,45 @@ public class VehicleAIService {
                 .collect(Collectors.toList());
     }
 
-    // Calculate cosine similarity between two vehicles
-    private double calculateCosineSimilarity(LendModel v1, LendModel v2) {
-        String type1 = v1.getVehicleType();
-        String type2 = v2.getVehicleType();
-        String location1 = v1.getCurrentLocation();
-        String location2 = v2.getCurrentLocation();
-        String name1 = v1.getVehicleName();
-        String name2 = v2.getVehicleName();
 
+    private double calculateCosineSimilarity(LendModel v1, LendModel v2) {
+        // Convert vehicle attributes to vectors
+        double[] vector1 = convertVehicleToVector(v1);
+        double[] vector2 = convertVehicleToVector(v2);
+
+        // Calculate dot product
         double dotProduct = 0;
-        dotProduct += (type1.equals(type2) ? 1 : 0);
-        dotProduct += (location1.equals(location2) ? 1 : 0);
-        dotProduct += (name1.equals(name2) ? 1 : 0);
+        for (int i = 0; i < vector1.length; i++) {
+            dotProduct += vector1[i] * vector2[i];
+        }
 
         // Calculate magnitudes
-        double magnitude1 = Math.sqrt(4); // Since we have 4 fields
-        double magnitude2 = Math.sqrt(4); // Since we have 4 fields
+        double magnitude1 = calculateMagnitude(vector1);
+        double magnitude2 = calculateMagnitude(vector2);
 
         // Calculate cosine similarity
         return dotProduct / (magnitude1 * magnitude2);
     }
 
+    // Convert vehicle attributes to a numerical vector
+    private double[] convertVehicleToVector(LendModel vehicle) {
+        String type = vehicle.getVehicleType();
+        String location = vehicle.getCurrentLocation();
+        String name = vehicle.getVehicleName();
 
+        return new double[]{
+                type.hashCode(),
+                location.hashCode(),
+                name.hashCode()
+        };
+    }
+
+    // Calculate the magnitude of a vector
+    private double calculateMagnitude(double[] vector) {
+        double sum = 0;
+        for (double v : vector) {
+            sum += v * v;
+        }
+        return Math.sqrt(sum);
+    }
 }
-
-
-
-
-
-
